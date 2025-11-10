@@ -1,0 +1,23 @@
+# name of pipeline
+name: github action demo pipeline
+
+#trigger
+on:
+    push:
+        branches:
+         -main
+
+
+jobs:
+    demo-job:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: checkout code
+              uses: actions/checkout@v2
+
+            - name: print massage
+              run: echo "run the demo program"
+
+
+
